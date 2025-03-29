@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Container (Header) -->
+    <div class="top-container">
+        <h1>📊 My Expense Manager</h1>
+    </div>
+
+    <!-- Main Layout: Excel Table + Expense Tracker -->
+    <div class="main-container">
+
+        <!-- Excel-Type Sheet (Left Side) -->
+        <div class="excel-sheet">
+            <h3>📋 Expense Data</h3>
+            <table id="expenseTable">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount (₹)</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseBody">
+                    <!-- New transactions will be added here dynamically -->
+                </tbody>
+            </table>
+            <button id="deleteSelected">Delete Selected</button>
+            <button id="updateSelected">Update Selected</button>
+        </div>
+        
+        <div class="container">
+            <h2>💰 Expense Tracker</h2>
+            <h3>Balance: ₹<span id="balance">0</span></h3>
+
+            <div class="form">
+                <input type="text" id="description" placeholder="Enter Description">
+                <input type="number" id="amount" placeholder="Enter Amount">
+                <button onclick="addTransaction()">Add Transaction</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
